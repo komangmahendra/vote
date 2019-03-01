@@ -10,7 +10,6 @@ function reportVote(){
     let objVoteCandidate = {}
 
     for(let i=0;i<=numCandidate;i++){
-        console.log(i)
         let counterVote = document.getElementById('counterBar'+i).innerHTML;
         let backgroundColor = document.getElementById("BarChart"+i).style.background
         let alias = document.getElementById('BarChartP'+i).innerHTML;
@@ -28,7 +27,6 @@ function reportVote(){
         
     }
 
-    console.log(sum)
     
     var x = document.createElement("TABLE");
         x.setAttribute("id", "myTable");
@@ -97,7 +95,7 @@ function reportVote(){
         document.getElementById("myTrTotal").appendChild(z);
 
         var z = document.createElement("TD");
-        var t = document.createTextNode(totPercentage);
+        var t = document.createTextNode(totPercentage.toFixed(2));
         z.appendChild(t);
         document.getElementById("myTrTotal").appendChild(z);
 }
@@ -110,8 +108,6 @@ function submitCandidate() {
     
     var e = document.getElementById("numCandidate");
     var numCandidate = e.options[e.selectedIndex].value;
-
-    console.log(numCandidate);
 
     //create alias untuk masing masing candidate
     var arrCandidate = [];
@@ -205,7 +201,6 @@ function createBar(numCandidate,arrCandidate) {
 
         colorB = "rgb("+r+", "+g+", "+b+")";
 
-        console.log(r)
         
         document.getElementById("BarChart"+i).style.width = '80px';
         document.getElementById("BarChart"+i).style.height = '80px';
@@ -289,7 +284,6 @@ function createBar(numCandidate,arrCandidate) {
             container.className = "containerBar";
             container.setAttribute('id','containerBar'+numCandidate);
             document.getElementById("voteChart").appendChild(container);
-            console.log('wkwkwkw')
 
             newBar = document.createElement('div');
             newBar.setAttribute("id", "BarChart"+numCandidate);
@@ -398,7 +392,6 @@ function voteMinus(BarChartId){
     document.getElementById("BarChart"+BarChartId).style.width = widthBar + "px";
 
     let counter = document.getElementById("counterBar"+BarChartId).innerHTML;
-    console.log(counter);
     document.getElementById("counterBar"+BarChartId).innerHTML = Number(counter)-1;
 }
 
