@@ -211,7 +211,8 @@
 }
 
 .containerContent #buttonChart{
-    border:solid  rgba(19, 106, 138, 0.7)  !important;
+    border:none !important;
+    background:   rgba(19, 106, 138, 0.1)  !important;
     display: flex;
     margin-left: 10%;
     width: 80%;
@@ -221,18 +222,16 @@
     margin-top:1%;
     margin-left:10%;
     padding-bottom: 5%;
+   
 }
 
 #buttonDone input[type=button]{
     width: 89%;
     height:70px;
-    background: linear-gradient(
-        rgba(19, 106, 138, 0.7), 
-        rgba(38, 120, 113, 0.5)
-    ) ;
+    background: rgba(38, 120, 113, 0.5);
     font-size:40px;
     color:white;
-    
+    border:none;
 }
 
 #containerResult {
